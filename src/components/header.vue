@@ -1,21 +1,20 @@
 <template>
-    <section class="banner" role="banner">
+    <section class="banner" role="banner"
+            :class="{ 'banner-fixed': isScrolledOverThreshold }">
         <div class="covered">
         </div>
         <header>
-            <nav-bar  
+            <nav-bar
+                :class="{ 'fixed': isScrolledOverThreshold }"
                 :title="title" 
                 :links='links'/>
-
         </header>
         <div class="container">
             <div class="col-md-10 col-md-offset-1 m-auto">
                 <div class="banner-text text-center">
                     <h1>Gomja.readme</h1>
                     <p>Web / Mobile Application Developer</p>
-                    <nav role="navigation" class=""> <a href="#services" class="banner-btn"><img src="images/down-arrow.png" alt=""></a></nav>
-                </div>
-            <!-- banner text --> 
+                </div> 
             </div>
         </div>
     </section>
@@ -25,14 +24,37 @@
 import NavBar from './nav/navbar';
 
 export default {
-    props : ['title' , 'links'],
+    //props : ['title' , 'links', 'isScrolledOverThreshold'],
+    props: {
+        title: {
+            type: String,
+            required: true,
+            default: 'Gomja.readme'
+        },
+        links: {
+            type: Array,
+            required: true
+        },
+        isScrolledOverThreshold: {
+            type: Boolean,
+            required: true,
+            default: false
+        }
+    },
     name : 'SiteHeader',
     data() {
-        return {}
+        return {
+            
+        }
     },
     components: {
         NavBar,
-    }
+    },
+    watch: {
+        isScrolledOverThreshold(){
+            console.log('changed : ' , this.isScrolledOverThreshold);
+        }
+    } 
 }
 </script>
 
@@ -54,6 +76,9 @@ export default {
         height:100%;
         max-height:600px;
         position:absolute;
+        top:0;
+        left:0;
+
     }
     .banner-btn {
         opacity: 0.5;
@@ -80,4 +105,9 @@ export default {
         margin-bottom: 80px;
         text-transform: uppercase;
     }
+    
+    .banner.banner-fixed{
+        padding-top : 56px;
+    }
+
 </style>

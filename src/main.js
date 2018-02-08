@@ -4,12 +4,18 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 
+
 /* eslint-disable */
 import 'expose-loader?$!expose-loader?jQuery!jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// additional component
+import vuescroll from 'vue-scroll';
+
 Vue.config.productionTip = false;
+
+Vue.use(vuescroll);
 
 /* eslint-disable no-new */
 new Vue({

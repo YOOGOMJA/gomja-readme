@@ -96,9 +96,8 @@ export default {
         font-weight: 400;
         letter-spacing: 3px;
         line-height: 24px;
-        margin-top: 10px;
-        margin-bottom: 80px;
         text-transform: uppercase;
+        margin:0px;
     }
     
     .banner.banner-fixed{

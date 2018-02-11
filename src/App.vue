@@ -42,7 +42,7 @@ export default {
     }
   },
   components: {
-    HeaderVue,
+    HeaderVue
   },
   created() {
      let doc = window.document;

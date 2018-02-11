@@ -20,6 +20,13 @@ Vue.use(VueScrollTo);
 
 import { store } from './store/index';
 
+// or import all icons if you don't care about bundle size
+import 'vue-awesome/icons'
+/* Register component with one of 2 methods */
+import Icon from 'vue-awesome/components/Icon'
+// globally (in your main .js file)
+Vue.component('icon', Icon)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

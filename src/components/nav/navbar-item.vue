@@ -43,7 +43,7 @@ export default {
     methods : {
         scroll(e) {
             history.pushState({} , this.ItemInfo.name , this.ItemInfo.link);
-            $("html, body").animate({ scrollTop: $(this.ItemInfo.link).offset().top }, 500);
+            $("html, body").animate({ scrollTop: $(this.ItemInfo.link).offset().top }, 400);
             this.$store.commit('activate', { title : this.ItemInfo.title });
         }
     }

@@ -1,7 +1,7 @@
 <template>
-    <li class="nav-item" :class="[this.isActive ? 'active' : '']">
-        <a class="nav-link" :href="link" >
-            {{title}}
+    <li class="nav-item" :class="[ItemInfo.isActive ? 'active' : '']">
+        <a class="nav-link" :href="ItemInfo.link" @click.prevent="scroll">
+            {{ItemInfo.title}}
         </a>
     </li>
 
@@ -34,11 +34,17 @@
 export default {
     name : 'NavBarItem',
     props : ['ItemInfo'],
-    data() {
+    data(){
+        console.log(this.$store)
         return {
-            title : this.ItemInfo.title,
-            link : this.ItemInfo.link,
-            isActive : this.ItemInfo.isActive
+            
+        }
+    },
+    methods : {
+        scroll(e) {
+            history.pushState({} , this.ItemInfo.name , this.ItemInfo.link);
+            $("html, body").animate({ scrollTop: $(this.ItemInfo.link).offset().top }, 500);
+            this.$store.commit('activate', { title : this.ItemInfo.title });
         }
     }
 }

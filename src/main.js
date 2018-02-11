@@ -11,15 +11,19 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // additional component
-import vuescroll from 'vue-scroll';
+import VueScrollTo from 'vue-scrollto';
+import Vuex from 'vuex';
 
 Vue.config.productionTip = false;
 
-Vue.use(vuescroll);
+Vue.use(VueScrollTo);
+
+import { store } from './store/index';
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   router,
   components: { App },
   template: '<App/>',

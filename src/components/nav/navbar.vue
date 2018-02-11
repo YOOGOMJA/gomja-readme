@@ -1,7 +1,7 @@
 <template>
     <div class="header-content">
         <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="#">{{title}}</a>
+            <a class="navbar-brand" href="">{{title}}</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -9,7 +9,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <nav-item
-                        v-for="item in linkItems"
+                        v-for="item in this.$store.state.links"
                         :key="item.id"
                         :item-info="item"
                     >
@@ -25,10 +25,10 @@ import NavItem from './navbar-item';
 
 export default {
     name : 'NavBar',
-    props : ['title', 'links'],
-    data () {
+    props : ['title'],
+    data() {
         return {
-            linkItems : this.links
+            links: []
         }
     },
     components : {
@@ -39,7 +39,7 @@ export default {
 
 <style scoped>
     .header-content{
-        background: rgba(255,255,255,0);
+        background: rgba(0, 0, 0, 0);
         position: relative;
         transition: all 0.2s linear;
         top:0;
@@ -47,7 +47,7 @@ export default {
         z-index:0;
     }
     .header-content.fixed {
-        background: #0c0c0c;
+        background: #050505;
         position: fixed;
         width:100%;
         left:0;

@@ -1,13 +1,12 @@
 <template>
-    <section class="banner" role="banner"
+    <section id="intro" class="banner" role="banner"
             :class="{ 'banner-fixed': isScrolledOverThreshold }">
         <div class="covered">
         </div>
         <header>
             <nav-bar
                 :class="{ 'fixed': isScrolledOverThreshold }"
-                :title="title" 
-                :links='links'/>
+                :title="title" />
         </header>
         <div class="container">
             <div class="col-md-10 col-md-offset-1 m-auto">
@@ -31,10 +30,6 @@ export default {
             required: true,
             default: 'Gomja.readme'
         },
-        links: {
-            type: Array,
-            required: true
-        },
         isScrolledOverThreshold: {
             type: Boolean,
             required: true,
@@ -52,9 +47,9 @@ export default {
     },
     watch: {
         isScrolledOverThreshold(){
-            console.log('changed : ' , this.isScrolledOverThreshold);
+            //console.log('changed : ' , this.isScrolledOverThreshold);
         }
-    } 
+    }
 }
 </script>
 

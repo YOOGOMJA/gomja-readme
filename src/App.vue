@@ -6,11 +6,13 @@
       :isScrolledOverThreshold="config.evt.isScrolledOverThreshold"
     />
     <router-view/>
+    <footer-vue></footer-vue>
   </div>
 </template>
 
 <script>
 import HeaderVue from './components/header';
+import FooterVue from './components/footer';
 
 export default {
   name: 'App',
@@ -42,7 +44,7 @@ export default {
     }
   },
   components: {
-    HeaderVue
+    HeaderVue , FooterVue
   },
   created() {
      let doc = window.document;

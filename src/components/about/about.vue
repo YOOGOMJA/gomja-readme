@@ -1,7 +1,7 @@
 <template>
     <div id='about' class='container-about'>
         <div class='container'>
-            <div class='row'>
+            <div class='row' style='display:none;'>
                 <div class='col-6 container-lang'>
                     <font-awesome-icon class='icon' :icon="iAppStore"></font-awesome-icon>
                     <p>
@@ -85,7 +85,7 @@ export default {
     .container-about{
         height: 100%;
         width: 100%;
-        background-color: #e09525;
+        background-color: #00bcbe;
     }
 
     .container-about .container{

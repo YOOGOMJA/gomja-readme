@@ -1,13 +1,39 @@
 <template>
     <div id='about' class='container-about'>
         <div class='container'>
+            <div class='row' style='display:none;'>
+                <div class='col-6 container-lang'>
+                    <font-awesome-icon class='icon' :icon="iAppStore"></font-awesome-icon>
+                    <p>
+                        iOS Applications with Objective C
+                    </p>
+                </div>
+                <div class='col-6 container-lang'>
+                    <font-awesome-icon class='icon' :icon="iJavascriptSquare"></font-awesome-icon>
+                    <p>
+                        Front-End development with recent libs.
+                    </p>
+                </div>
+
+                <div class='col-6 container-lang'>
+                    <font-awesome-icon class='icon' :icon="iGitSquare"></font-awesome-icon>
+                    <p>
+                        Cooperation with git and subversion.
+                    </p>
+                </div>
+
+                <div class='col-6 container-lang'>
+                    <font-awesome-icon class='icon' :icon="iServer"></font-awesome-icon>
+                    <p>
+                        Back-end Development, ASP.NET
+                    </p>
+                </div>
+            </div>
             <h1>
                 Hi! <br/> I'm Yoo.
             </h1>
             <p>
-                a Software Developer. 
-                <font-awesome-icon :icon="iAppStore"></font-awesome-icon>
-                <font-awesome-icon :icon="iJavascriptSquare"></font-awesome-icon>
+                a Software Developer, Colleage Student.  
             </p>
         </div>
     </div>
@@ -15,8 +41,8 @@
 
 <script>
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
-import { faCoffee } from '@fortawesome/fontawesome-free-solid';
-import { faAppStoreIos, faJsSquare, faJs } from '@fortawesome/fontawesome-free-brands';
+import { faCoffee, faDatabase, faServer } from '@fortawesome/fontawesome-free-solid';
+import { faAppStoreIos, faJsSquare, faJs, faGitSquare } from '@fortawesome/fontawesome-free-brands';
 
 export default {
     name : "ContentAbout",
@@ -41,6 +67,15 @@ export default {
         },
         iJavascriptSquare(){
             return faJsSquare;
+        },
+        iDatabase(){
+            return faDatabase;
+        },
+        iServer(){
+            return faServer;
+        },
+        iGitSquare(){
+            return faGitSquare;
         }
     }
 }
@@ -50,7 +85,7 @@ export default {
     .container-about{
         height: 100%;
         width: 100%;
-        background-color: #6c7a89;
+        background-color: #00bcbe;
     }
 
     .container-about .container{
@@ -58,15 +93,33 @@ export default {
     }
     
     .container-about .container h1{
-        color: #eee;
-        font-size:5.5em;
-        text-align:left;
+        color: #fff;
+        font-size:4.5em;
+        text-align:right;
+        margin-top : .5em;
+        font-weight:800;
     }
 
     .container-about .container p{
-        color: #eee;
-        font-size:1.5em;
+        color: #fff;
+        font-size:1.3em;
         text-align:left;
+    }
+
+    .container-about .container-lang {
+        color: #fff;
+        padding: 1.5em;
+    }
+
+    .container-about .container-lang p {
+        font-size:1em;
+        text-align:center;
+        font-weight:800;
+        margin : 1em 0px;
+    }
+
+    .container-about .container-lang .icon{
+        font-size: 5.0em;
     }
 
 </style>

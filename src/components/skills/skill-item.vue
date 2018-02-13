@@ -9,9 +9,9 @@
             </span>
             <div class="progress-value">
                 <div>
-                    {{info.lvl}}
+                    {{info.lvl}}<span>/100</span>
                     <br>
-                    <span>completed</span>
+                    <span>accomplished</span>
                 </div>
             </div>
         </div>
@@ -46,7 +46,8 @@ export default {
 <style lang="scss" scoped>
 
 .skill-item-container { padding : 5px; }
-.skill-item-container p { margin: 6px 0; }
+.skill-item-container p { margin: 13px 0; }
+.progress-value span{ font-size:.3em; }
 
 //styling
 $borderWidth: 8px;

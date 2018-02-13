@@ -7,7 +7,7 @@
                         <h1>
                             Technical skills
                         </h1>
-                        <p>I quite good at</p>
+                        <p>이런 것들은 좀 다룰줄 압니다</p>
                         <hr/>
                     </div>
                 </div>
@@ -16,7 +16,7 @@
                 <div    class='col-4'
                         v-for="item in skills"
                         :key="item.id">
-                    <skill-item 
+                    <skill-item
                         :info="item">
                     </skill-item>
                 </div>
@@ -25,20 +25,20 @@
                 <div class='col-12'>
                     <br/>
                     <div class='header'>
-                        <p>and I can say about</p>
+                        <p>그리고 이런 것들에 대해 몇마디 거들 수 있어요</p>
                         <hr/>
                     </div>
                 </div>
             </div>
             
             <div class='additional'>
-                <font-awesome-icon class='icon' :icon='iGit'></font-awesome-icon>
-                <font-awesome-icon class='icon' :icon='iReact'></font-awesome-icon>
-                <font-awesome-icon class='icon' :icon='iVue'></font-awesome-icon>
-                <font-awesome-icon class='icon' :icon='iAWS'></font-awesome-icon>
-                <font-awesome-icon class='icon' :icon='iHtml5'></font-awesome-icon>
-                <font-awesome-icon class='icon' :icon='iNode'></font-awesome-icon>
-                <font-awesome-icon class='icon' :icon='iSass'></font-awesome-icon>
+                <span title='Git'><font-awesome-icon class='icon' :icon='iGit'></font-awesome-icon></span>
+                <span title='ReactJS'><font-awesome-icon class='icon' :icon='iReact'></font-awesome-icon></span>
+                <span title='VueJS'><font-awesome-icon class='icon' :icon='iVue'></font-awesome-icon></span>
+                <span title='AmazonWebService'><font-awesome-icon class='icon' :icon='iAWS'></font-awesome-icon></span>
+                <span title='HTML5'><font-awesome-icon class='icon' :icon='iHtml5'></font-awesome-icon></span>
+                <span title='nodeJS'><font-awesome-icon class='icon' :icon='iNode'></font-awesome-icon></span>
+                <span title='Sass'><font-awesome-icon class='icon' :icon='iSass'></font-awesome-icon></span>
             </div>
         </div>
     </div>
@@ -77,7 +77,7 @@ export default {
                 },
                 {
                     name: 'AngularJS',
-                    lvl:70,
+                    lvl:80,
                     logo:'',
                     cate : 'front'
                 },
@@ -94,7 +94,7 @@ export default {
                 },
                 {
                     name: 'Objective C',
-                    lvl:70,
+                    lvl:80,
                     logo:'',
                     cate:'mobile'
                 }

@@ -39,6 +39,8 @@
                 <span title='HTML5'><font-awesome-icon class='icon' :icon='iHtml5'></font-awesome-icon></span>
                 <span title='nodeJS'><font-awesome-icon class='icon' :icon='iNode'></font-awesome-icon></span>
                 <span title='Sass'><font-awesome-icon class='icon' :icon='iSass'></font-awesome-icon></span>
+                <span title='npm'><font-awesome-icon class='icon' :icon='iNPM'></font-awesome-icon></span>
+                <span title='font-awesome'><font-awesome-icon class='icon' :icon='iFontAwesome'></font-awesome-icon></span>
             </div>
         </div>
     </div>
@@ -48,7 +50,7 @@
 <script>
 import SkillItem from './skill-item';
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome';
-import { faGitSquare, faVuejs, faNodeJs, faReact, faHtml5, faSass, faGit, faAngular, faAws } from '@fortawesome/fontawesome-free-brands';
+import { faGitSquare, faVuejs, faNodeJs, faReact, faHtml5, faSass, faGit, faAngular, faAws, faFontAwesomeFlag, faNpm } from '@fortawesome/fontawesome-free-brands';
 import { faDatabase } from '@fortawesome/fontawesome-free-solid';
 
 
@@ -128,6 +130,12 @@ export default {
         },
         iAWS(){
             return faAws;
+        },
+        iFontAwesome(){
+            return faFontAwesomeFlag;
+        },
+        iNPM(){
+            return faNpm;
         }
     }
 }

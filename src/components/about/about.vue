@@ -89,12 +89,12 @@ export default {
     }
 
     .container-about .container{
-        padding: 4em 9em;
+        padding: 1em;
     }
     
     .container-about .container h1{
         color: #fff;
-        font-size:4.5em;
+        font-size:5.5em;
         text-align:right;
         margin-top : .5em;
         font-weight:800;

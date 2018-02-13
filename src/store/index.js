@@ -8,7 +8,7 @@ export const store = new Vuex.Store({
       links: [ 
         { title : 'intro'    , isActive : true , link: '#intro' },
         { title : 'about'    , isActive : false , link: '#about' },
-        { title : 'language' , isActive : false , link : '#language' },
+        { title : 'skill' , isActive : false , link : '#skill' },
         { title : 'project'  , isActive : false , link : '#project' },
         { title : 'career'   , isActive : false , link : '#career' },
         { title : 'contact'  , isActive : false , link : '#contact' }

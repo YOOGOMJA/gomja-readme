@@ -30,7 +30,18 @@
                 </div>
             </div>
             <h1>
-                Hi! <br/> I'm Yoo.
+                Hi! <br/> I'm <vue-typer    :text='["Yoo.","Web Developer.","iOS Developer.", "College Student."]'
+                                            :repeat='Infinity'
+                                            :shuffle='false'
+                                            initial-action='typing'
+                                            :pre-type-delay='70'
+                                            :type-delay='70'
+                                            :pre-erase-delay='3000'
+                                            :erase-delay='50'
+                                            erase-style='backspace'
+                                            :erase-on-complete='false'
+                                            caret-animation='smooth'
+                                            ></vue-typer>
             </h1>
             <p>
                 소프트웨어 개발자입니다. 한국의 경기도 남양주시에 거주 중이고, 현재 삼육대학교 컴퓨터 공학과에 재학중입니다. 아이폰을 중심으로한 모바일 프로그래밍과 웹 프로그래밍 전반에 관심을 갖고있습니다. 산업근무요원을 거쳐 두 곳에서 3년 남짓 직장 생활을 이어오다 다시 학생으로 돌아왔습니다. 최근엔 swift와 VueJS, React 등의 최신 웹 프론트엔드 라이브러리들에 관심이 많아 공부 중입니다.
@@ -43,6 +54,7 @@
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 import { faCoffee, faDatabase, faServer } from '@fortawesome/fontawesome-free-solid';
 import { faAppStoreIos, faJsSquare, faJs, faGitSquare } from '@fortawesome/fontawesome-free-brands';
+import { VueTyper } from 'vue-typer';
 
 export default {
     name : "ContentAbout",
@@ -53,7 +65,7 @@ export default {
         }
     },
     components: {
-        FontAwesomeIcon,
+        FontAwesomeIcon, VueTyper
     },
     computed: {
         iCoffee(){
@@ -121,5 +133,4 @@ export default {
     .container-about .container-lang .icon{
         font-size: 5.0em;
     }
-
 </style>

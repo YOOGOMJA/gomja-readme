@@ -99,7 +99,6 @@ export default {
         width: 100%;
         background-color: #00bcbe;
     }
-
     .container-about .container{
         padding: 1em;
     }
@@ -132,5 +131,18 @@ export default {
 
     .container-about .container-lang .icon{
         font-size: 5.0em;
+    }
+</style>
+<style lang='scss'>
+    .vue-typer{
+        .custom.char{   
+            &.typed{
+                color:#fff;
+            }
+        }
+        .custom.caret{
+            background-color:#fff;
+            width:3px;
+        }
     }
 </style>

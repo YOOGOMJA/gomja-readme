@@ -52,6 +52,6 @@ export default {
         width:100%;
         left:0;
         /*padding: 10px 0;*/
-        z-index: 100;
+        z-index: 1000;
     }
 </style>

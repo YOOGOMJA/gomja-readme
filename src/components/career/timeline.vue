@@ -49,7 +49,7 @@ export default {
             });
 
             items.push({
-                title : '성결대학교 입학',
+                title : '삼육대학교 편입',
                 /*content: '대학교 입학함',*/
                 badgeColor: 'primary',
                 badgeIcon : faGraduationCap,

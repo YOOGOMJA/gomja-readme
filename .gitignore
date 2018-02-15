@@ -8,6 +8,30 @@ yarn-error.log*
 /test/e2e/reports/
 selenium-debug.log
 
+# front-end
+/frontend/.DS_Store
+/frontend/node_modules/
+/frontend/dist/
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+/frontend//test/unit/coverage/
+/frontend//test/e2e/reports/
+/frontend/selenium-debug.log
+
+# back-end
+
+/backend/.DS_Store
+/backend/node_modules/
+/backend/dist/
+/backend/npm-debug.log*
+/backend/yarn-debug.log*
+/backend/yarn-error.log*
+/backend//test/unit/coverage/
+/backend//test/e2e/reports/
+/backend/selenium-debug.log
+
+
 # Editor directories and files
 .idea
 .vscode

@@ -1,0 +1,21 @@
+{
+  "name": "gomjafolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./backend/bin/www",
+    "build": "node ./frontend/build/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOOGOMJA/gomja-readme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YOOGOMJA/gomja-readme/issues"
+  },
+  "homepage": "https://github.com/YOOGOMJA/gomja-readme#readme"
+}

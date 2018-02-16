@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/YOOGOMJA/gomja-readme/issues"
   },
-  "homepage": "https://github.com/YOOGOMJA/gomja-readme#readme"
+  "homepage": "https://github.com/YOOGOMJA/gomja-readme#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }

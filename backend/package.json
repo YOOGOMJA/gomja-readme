@@ -13,7 +13,10 @@
     "express": "~4.15.5",
     "jade": "~1.11.0",
     "morgan": "~1.9.0",
-    "nodemon": "^1.14.12",
-    "serve-favicon": "~2.4.5"
+    "nodemailer": "^4.4.2",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "nodemon": "^1.15.0",
+    "serve-favicon": "~2.4.5",
+    "xoauth2": "^1.2.0"
   }
 }

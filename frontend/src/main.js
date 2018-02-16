@@ -3,8 +3,7 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-import Axios from 'axios';
-
+import axios from 'axios';
 
 /* eslint-disable */
 import 'expose-loader?$!expose-loader?jQuery!jquery';
@@ -16,9 +15,9 @@ import VueScrollTo from 'vue-scrollto';
 import Vuex from 'vuex';
 
 Vue.config.productionTip = false;
-Vue.prototype.$http = Axios;
 
 Vue.use(VueScrollTo);
+Vue.prototype.$http = axios;
 
 import { store } from './store/index';
 
@@ -34,6 +33,6 @@ new Vue({
   el: '#app',
   store,
   router,
-  components: { App },
+  components: { App  },
   template: '<App/>',
 });

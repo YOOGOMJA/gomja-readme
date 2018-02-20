@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./backend/bin/www",
-    "build": "node ./frontend/build/build.js"
+    "build": "node ./frontend/build/build.js",
+    "install" : "cd backend && npm install"
   },
   "repository": {
     "type": "git",

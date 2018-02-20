@@ -14,7 +14,7 @@
                 <p>
                     <small class='text-muted'>
                         <font-awesome-icon :icon="iClock"></font-awesome-icon>
-                        11 hours ago via blog
+                        {{sDateFromCurrent}}
                     </small>
                 </p>
             </div>
@@ -28,13 +28,14 @@
 </template>
 
 <script>
+import Moment from 'moment';
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome';
 import { faClock, faGraduationCap } from '@fortawesome/fontawesome-free-solid';
 
 
 export default {
     name:'TimelineItem',
-    props :[ 'isInverted' , 'badgeColor' , 'badgeIcon' , 'eventTitle' , 'eventContent' ],
+    props :[ 'isInverted' , 'badgeColor' , 'badgeIcon' , 'eventTitle' , 'eventContent', 'eventDate' ],
     data(){
         return {
 
@@ -43,6 +44,13 @@ export default {
     computed: {
         iClock(){
             return faClock;
+        },
+        sDateFromCurrent(){
+            let _m = new Moment(this.eventDate);
+
+            let _t = _m.format('YYYY.MM') + ', ' + _m.fromNow();
+
+            return _t;
         }
     },
     components:{ FontAwesomeIcon }

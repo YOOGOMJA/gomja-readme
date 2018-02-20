@@ -13,12 +13,13 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/send' , function(req, res, next){
-    //res.send({
-    //    data : {
-    //        mesg : 'You tried to send mail',
-    //        body : req.body
-    //    }
-    //});
+    res.send({
+        data : {
+            mesg : 'You tried to send mail',
+            body : req.body
+        }
+    });
+    /*
     try{
         var transporter = nodemailer.createTransport(smtpTransporter({  
             service: 'naver',
@@ -56,6 +57,7 @@ router.post('/send' , function(req, res, next){
             err : e
         });
     }
+    */
 });
 
 module.exports = router;

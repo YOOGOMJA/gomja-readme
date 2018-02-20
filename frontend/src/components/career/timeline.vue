@@ -4,9 +4,10 @@
                         :key="item.id"  
                         :eventTitle="item.title"
                         :eventContent="item.content"
+                        :eventDate="item.date"
                         :badgeColor="item.badgeColor"
                         :badgeIcon="item.badgeIcon"
-                        :isInverted="item.isInverted"
+                        :isInverted="item.isInverted"                        
         ></timeline-item-vue>
     </ul>
 </template>
@@ -26,7 +27,8 @@ export default {
 
             items.push({
                 title : '성결대학교 입학',
-                /*content: '대학교 입학함',*/
+                content: '10학번으로 멀티미디어 공학부에 입학하였습니다',
+                date: new Date('2010-03-01'),
                 badgeColor: '',
                 badgeIcon : faGraduationCap,
                 isInverted: false
@@ -34,7 +36,8 @@ export default {
 
             items.push({
                 title : '(주)유씨알엠 입사',
-                /*content: '대학교 입학함',*/
+                content: '사원으로 입사하여 주임으로 퇴직하였습니다.\n약 2년 9개월 가량 재직하였습니다',
+                date: new Date('2013-11-01'),
                 badgeColor: 'warning',
                 badgeIcon : faBuilding,
                 isInverted: true
@@ -42,7 +45,8 @@ export default {
 
             items.push({
                 title : '(주)와이드모바일 입사',
-                /*content: '대학교 입학함',*/
+                content: '사원으로 입사후 약 6개월 가량 재직하였습니다',
+                date: new Date('2017-04-01'),
                 badgeColor: 'success',
                 badgeIcon : faCode,
                 isInverted: false
@@ -50,7 +54,8 @@ export default {
 
             items.push({
                 title : '삼육대학교 편입',
-                /*content: '대학교 입학함',*/
+                content: '18년부로 컴퓨터 공학 16학번으로 편입하였습니다',
+                date: new Date('2018-02-26'),
                 badgeColor: 'primary',
                 badgeIcon : faGraduationCap,
                 isInverted: true

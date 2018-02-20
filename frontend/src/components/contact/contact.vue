@@ -34,14 +34,12 @@
                     </textarea>
                 </div>
 
-
-                <div    v-for="item in error"
-                        :key="item.id"
-                        class="alert alert-danger w-100" role="alert">
-                        {{item.mesg}}
-                </div>
-
                 <div class='mb-3 col-12'>
+                    <div    v-for="item in error"
+                            :key="item.id"
+                            class="alert alert-danger w-100" role="alert">
+                            {{item.mesg}}
+                    </div>
                     <button type='button' class='btn btn-lg btn-mint' @click='submitMail()'>보내기</button>
                 </div>
 
@@ -57,11 +55,16 @@ export default {
     name: 'ContactVue',
     data(){
         return {
-            mail : 'a@bc.com',
-            phone : '010-1234-1234',
-            subject : 'subject',
-            content : 'content',
-            error : []
+            // mail : 'a@bc.com',
+            // phone : '010-1234-1234',
+            // subject : 'subject',
+            // content : 'content',
+            mail : '',
+            phone : '',
+            subject : '',
+            content : '',
+            error : [],
+            mailSendingRequested: false
         }
     },
     computed:{
@@ -108,21 +111,34 @@ export default {
             return isPassed;
         },
         submitMail(){
-            if(this.validate()){
-                //this.$http.get('/api/mailer').then(res => {
-                //    console.log(res);
-                //})
-                this.$http.post('/api/mailer/send' , {
-                    mail : this.mail,
-                    phone : this.phone,
-                    subject : this.subject,
-                    content : this.content
-                }
-                ).then(res => {
-                    console.log(res);
-                })
+            if(this.mailSendingRequested){
+                alert('메일을 보내는 중입니다. 잠시만 기다려주세요');
             }
-            else{ console.log('Error!!') }
+            else{
+                if(this.validate()){
+                    this.mailSendingRequested = true;
+
+                    this.$http.post('/api/mailer/send' , {
+                        mail : this.mail,
+                        phone : this.phone,
+                        subject : this.subject,
+                        content : this.content
+                    }
+                    ).then(res => {
+                        console.log(res);
+                        if(res.status === 200){
+                            alert('메일이 발송됐습니다! 감사합니다 👍');
+                        }
+                        else{
+                            alert('메일 발송이 실패했습니다..\n에러 : ['+ res.data.data.mesg +']');
+                        }
+                        this.mailSendingRequested = false;
+                    } , res => {
+                        alert('메일 발송이 실패했습니다..\n에러 : ['+ res.data.data.mesg +']');
+                        this.mailSendingRequested = false;
+                    });
+                }
+            }
         }
     }
 }

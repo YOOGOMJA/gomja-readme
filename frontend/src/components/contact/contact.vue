@@ -7,14 +7,14 @@
                 <hr/>
             </div>
             <div class='row contact-forms'>
-                <div class='input-group mb-3 col-6'>
+                <div class='input-group mb-3 col-12 col-md-6 col-lg-6 col-xl-6'>
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Email</span>
                     </div>
                     <input  v-model='mail'
                             id='txtEmail' type='text' class='form-control' placeholder='이메일 주소를 적어주세요'/>
                 </div>
-                <div class='input-group mb-3 col-6'>
+                <div class='input-group mb-3 col-12 col-md-6 col-lg-6 col-xl-6'>
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Phone</span>
                     </div>

@@ -94,7 +94,7 @@ export default {
 </script>
 
 <style scoped>
-    .container-about{
+    /* .container-about{
         height: 100%;
         width: 100%;
         background-color: #00bcbe;
@@ -131,9 +131,85 @@ export default {
 
     .container-about .container-lang .icon{
         font-size: 5.0em;
-    }
+    } */
 </style>
 <style lang='scss'>
+    $breakpoints: (
+        'small': (min-width:500px),
+        'medium': (min-width: 990px),
+        'large': (min-width: 1000px),
+        'huge': (min-width: 1200px),
+    );
+    /// 반응형 매니저
+    /// @access public
+    /// @param {String} $breakpoint - 브레이크포인트
+    /// @requires $breakpoints
+    @mixin respond-to($breakpoint) {
+    $raw-query: map-get($breakpoints, $breakpoint);
+
+    @if $raw-query {
+        $query: if(
+        type-of($raw-query) == 'string',
+        unquote($raw-query),
+        inspect($raw-query)
+        );
+
+        @media #{$query} {
+        @content;
+        }
+    } @else {
+        @error 'No value found for `#{$breakpoint}`. '
+            + 'Please make sure it is defined in `$breakpoints` map.';
+    }
+    }
+
+    .container-about{
+        height: 100%;
+        width: 100%;
+        background-color: #00bcbe;
+     
+        .container{
+            padding: 1em;
+
+            h1 {
+                color: #fff;
+                font-size:2em;
+                text-align:right;
+                margin-top : .5em;
+                font-weight:800;
+                @include respond-to('small'){
+                    font-size:4em;
+                }
+                @include respond-to('medium'){
+                    font-size: 5.5em;
+                }
+            }
+            p {
+                color: #fff;
+                text-align:left;
+                font-size:1em;
+                @include respond-to('small'){
+                    font-size:1.3em;
+                }
+            }
+        }
+
+        .container-lang {
+            color: #fff;
+            padding: 1.5em;
+
+            p {
+                font-size:1em;
+                text-align:center;
+                font-weight:800;
+                margin : 1em 0px;
+            }
+            .icon{
+                font-size: 5.0em;
+            } 
+        }
+    }
+
     .vue-typer{
         .custom.char{   
             &.typed{

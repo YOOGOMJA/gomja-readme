@@ -13,8 +13,19 @@
                 </div>
             </div>
             <div class='row'>
-                <div    class='col-4'
-                        v-for="item in skills"
+                <!-- SKILL ROW 1 -->
+                <div class='col'
+                        v-for="item in skills_row1"
+                        :key="item.id">
+                    <skill-item
+                        :info="item">
+                    </skill-item>
+                </div>
+            </div>
+            <div class='row'>
+                <!-- SKILL ROW 2 -->
+                <div class='col'
+                        v-for="item in skills_row2"
                         :key="item.id">
                     <skill-item
                         :info="item">
@@ -83,6 +94,45 @@ export default {
                     logo:'',
                     cate : 'front'
                 },
+                {
+                    name: 'ASP.NET',
+                    lvl:70,
+                    logo:'',
+                    cate:'back',
+                },
+                {
+                    name: 'MSSQL',
+                    lvl:60,
+                    logo:'back'
+                },
+                {
+                    name: 'Objective C',
+                    lvl:80,
+                    logo:'',
+                    cate:'mobile'
+                }
+            ],
+            skills_row1:[
+                {
+                    name : 'Javascript',
+                    lvl: 70,
+                    logo : '' ,
+                    cate : 'front'
+                },
+                {
+                    name : 'jQuery',
+                    lvl : 80,
+                    logo : '',
+                    cate : 'front'
+                },
+                {
+                    name: 'AngularJS',
+                    lvl:80,
+                    logo:'',
+                    cate : 'front'
+                },
+            ],
+            skills_row2:[
                 {
                     name: 'ASP.NET',
                     lvl:70,

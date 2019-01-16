@@ -124,13 +124,6 @@ export default {
                     this.$http({
                         url : 'https://gomja-log-mailer.herokuapp.com/mailer/send',
                         method : 'post',
-                        mode: 'no-cors',
-                        headers: {
-                            'Access-Control-Allow-Origin': '*',
-                            'Content-Type': 'application/json',
-                        },
-                        withCredentials: true,
-                        credentials: 'same-origin',
                         data : {
                             mail : this.mail,
                             phone : this.phone,

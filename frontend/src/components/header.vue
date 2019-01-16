@@ -83,7 +83,7 @@ export default {
     }
     .banner-text h1 {
         color: #fff;
-        font-family: "Source Sans Pro";
+        /* font-family: "Source Sans Pro"; */
         font-size: 53px;
         letter-spacing: 20px;
         font-weight: 700;

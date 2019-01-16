@@ -8,7 +8,7 @@
             </div>
             <div class='project-content'>
                 <h5 class='w-100 text-left'>
-                    <span class='badge badge-danger' style='font-size : 4px;'>new !</span>
+                    <span class='badge badge-danger' style='font-size : .25em;'>new !</span>
                     <b class='align-middle'>SYUNotification</b>
                     <a target='_blank' href='https://chrome.google.com/webstore/detail/syunotification/icgcbogmfianabccahhdadhcfmenhhik?hl=ko' class='badge badge-primary'>link</a>
                 </h5>
@@ -18,7 +18,7 @@
             </div>
             <div class='project-content'>
                 <h5 class='w-100 text-left'>
-                    <span class='badge badge-danger' style='font-size : 4px;'>new !</span>
+                    <span class='badge badge-danger' style='font-size : .25em;'>new !</span>
                     <b class='align-middle'>픽 앤 셀 - ICT 한이음 멘토링 프로젝트</b>
                     <a target='_blank' href='https://www.youtube.com/watch?v=RbiE0HLi4Xg&feature=youtu.be' class='badge badge-primary'>link</a>
                 </h5>
@@ -28,7 +28,7 @@
             </div>
             <div class='project-content'>
                 <h5 class='w-100 text-left'>
-                    <span class='badge badge-danger' style='font-size : 4px;'>new !</span>
+                    <span class='badge badge-danger' style='font-size : .25em;'>new !</span>
                     <b class='align-middle'>교내 C 언어 스터디</b>
                     <a target='_blank' href='https://github.com/YOOGOMJA/C_LANG_STUDY' class='badge badge-primary'>link</a>
                 </h5>
@@ -38,7 +38,7 @@
             </div>
              <div class='project-content'>
                 <h5 class='w-100 text-left'>
-                    <span class='badge badge-danger' style='font-size : 4px;'>new !</span>
+                    <span class='badge badge-danger' style='font-size : .25em;'>new !</span>
                     <b class='align-middle'>클릭잡 하이브리드 어플리케이션</b>
                     <a target='_blank' href='http://www.clickjobkorea.com' class='badge badge-primary'>link</a>
                 </h5>
@@ -49,7 +49,7 @@
             </div>
             <div class='project-content'>
                 <h5 class='w-100 text-left'>
-                    <span class='badge badge-danger' style='font-size : 4px;'>new !</span>
+                    <span class='badge badge-danger' style='font-size : .25em;'>new !</span>
                     <b class='align-middle'>위례 야구 아카데미 홈페이지 개발 , 운영</b>
                     <a target='_blank' href='http://위례야구아카데미.com' class='badge badge-primary'>link</a>
                 </h5>

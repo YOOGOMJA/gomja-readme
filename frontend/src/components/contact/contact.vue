@@ -12,7 +12,8 @@
                         <span class="input-group-text" id="basic-addon1">Email</span>
                     </div>
                     <input  v-model='mail'
-                            id='txtEmail' type='text' class='form-control' placeholder='이메일 주소를 적어주세요'/>
+                            id='txtEmail' type='text' class='form-control' placeholder='이메일 주소를 적어주세요'
+                            />
                 </div>
                 <div class='input-group mb-3 col-12 col-md-6 col-lg-6 col-xl-6'>
                     <div class="input-group-prepend">
@@ -50,19 +51,20 @@
 
 <script>
 import axios from 'axios';
+axios.defaults.withCredentials = true;
 
 export default {
     name: 'ContactVue',
     data(){
         return {
-            // mail : 'a@bc.com',
-            // phone : '010-1234-1234',
-            // subject : 'subject',
-            // content : 'content',
-            mail : '',
-            phone : '',
-            subject : '',
-            content : '',
+            mail : 'a@bc.com',
+            phone : '010-1234-1234',
+            subject : 'subject',
+            content : 'content',
+            // mail : '',
+            // phone : '',
+            // subject : '',
+            // content : '',
             error : [],
             mailSendingRequested: false
         }
@@ -117,24 +119,41 @@ export default {
             else{
                 if(this.validate()){
                     this.mailSendingRequested = true;
-
-                    this.$http.post('https://gomja-log-mailer.herokuapp.com/mailer/send' , {
-                        mail : this.mail,
-                        phone : this.phone,
-                        subject : this.subject,
-                        content : this.content
-                    }
-                    ).then(res => {
+                    //this.$http.headers.common['Access-Control-Allow-Origin'] = '*';
+                    console.log(this);
+                    this.$http({
+                        url : 'https://gomja-log-mailer.herokuapp.com/mailer/send',
+                        method : 'post',
+                        mode: 'no-cors',
+                        headers: {
+                            'Access-Control-Allow-Origin': '*',
+                            'Content-Type': 'application/json',
+                        },
+                        withCredentials: true,
+                        credentials: 'same-origin',
+                        data : {
+                            mail : this.mail,
+                            phone : this.phone,
+                            subject : this.subject,
+                            content : this.content
+                        }
+                    })
+                    .then(res => {
                         console.log(res);
                         if(res.status === 200){
                             alert('메일이 발송됐습니다! 감사합니다 👍');
                         }
                         else{
-                            alert('메일 발송이 실패했습니다..\n에러 : ['+ res.data.data.mesg +']');
+                            if(res.data){
+                                alert('메일 발송이 실패했습니다..\n에러 : ['+ res.data.data.mesg +']');
+                            }
+                            else{
+                                alert('일시적인 오류로 메일 발송이 실패했습니다. 잠시 후 다시 시도해주세요');
+                            }
                         }
                         this.mailSendingRequested = false;
                     } , res => {
-                        alert('메일 발송이 실패했습니다..\n에러 : ['+ res.data.data.mesg +']');
+                        alert('일시적인 오류로 메일 발송이 실패했습니다. 잠시 후 다시 시도해주세요');
                         this.mailSendingRequested = false;
                     });
                 }

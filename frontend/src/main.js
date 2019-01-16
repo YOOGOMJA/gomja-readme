@@ -26,7 +26,7 @@ import 'vue-awesome/icons'
 /* Register component with one of 2 methods */
 import Icon from 'vue-awesome/components/Icon'
 // globally (in your main .js file)
-Vue.component('icon', Icon)
+Vue.component('icon', Icon);
 
 /* eslint-disable no-new */
 new Vue({

@@ -57,14 +57,14 @@ export default {
     name: 'ContactVue',
     data(){
         return {
-            mail : 'a@bc.com',
-            phone : '010-1234-1234',
-            subject : 'subject',
-            content : 'content',
-            // mail : '',
-            // phone : '',
-            // subject : '',
-            // content : '',
+            // mail : 'a@bc.com',
+            // phone : '010-1234-1234',
+            // subject : 'subject',
+            // content : 'content',
+            mail : '',
+            phone : '',
+            subject : '',
+            content : '',
             error : [],
             mailSendingRequested: false
         }

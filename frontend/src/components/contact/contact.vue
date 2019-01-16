@@ -124,6 +124,7 @@ export default {
                     this.$http({
                         url : 'https://gomja-log-mailer.herokuapp.com/mailer/send',
                         method : 'post',
+                        headers:{},
                         data : {
                             mail : this.mail,
                             phone : this.phone,

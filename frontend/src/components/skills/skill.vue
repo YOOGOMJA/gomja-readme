@@ -60,8 +60,8 @@
 
 <script>
 import SkillItem from './skill-item';
-import FontAwesomeIcon from '@fortawesome/vue-fontawesome';
-import { faGitSquare, faVuejs, faNodeJs, faReact, faHtml5, faSass, faGit, faAngular, faAws, faFontAwesomeFlag, faNpm } from '@fortawesome/fontawesome-free-brands';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faGitSquare, faVuejs, faNodeJs, faReact, faHtml5, faSass, faGit, faAngular, faAws, faFontAwesomeFlag, faNpm} from '@fortawesome/fontawesome-free-brands';
 import { faDatabase } from '@fortawesome/fontawesome-free-solid';
 
 

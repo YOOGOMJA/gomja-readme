@@ -30,7 +30,7 @@
                 </div>
             </div>
             <h1>
-                Hi! <br/> I'm <vue-typer    :text='["Yoo.","Web Developer.","iOS Developer.", "College Student."]'
+                Hi! <br/> I'm <vue-typer    :text='["Yoo.","Web Programmer.","iOS Programmer.", "College Student."]'
                                             :repeat='Infinity'
                                             :shuffle='false'
                                             initial-action='typing'

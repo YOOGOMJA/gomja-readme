@@ -60,6 +60,15 @@ export default {
                 badgeIcon : faGraduationCap,
                 isInverted: true
             });
+            
+            items.push({
+                title : '교내 경진 대회 입상',
+                content: '삼육대학교 교내 프로그램 개발 경진대회에서 3등으로 입상하였습니다',
+                date: new Date('2018-11-21'),
+                badgeColor: 'primary',
+                badgeIcon : faCode,
+                isInverted: false
+            });
 
             return items;
         }

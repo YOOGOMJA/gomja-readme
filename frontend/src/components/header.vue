@@ -12,7 +12,7 @@
             <div class="col-md-10 col-md-offset-1 m-auto">
                 <div class="banner-text text-center">
                     <h1>Gomja.readme</h1>
-                    <p>Web / Mobile Application Developer</p>
+                    <p>Web / Mobile Application Programmer</p>
                 </div> 
             </div>
         </div>

@@ -8,7 +8,7 @@ var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'machun34@gmail.com',
-    pass: 'rhawk1202:-)'
+    pass: '@rhawk1202'
   }
 });
 
@@ -18,6 +18,11 @@ router.get('/', function(req, res, next) {
     res.send({
         data:{ hello : 'world' }
     })
+});
+router.get('/test' , function(req, res){
+    console.log('hello');
+
+    res.status(200).send('HelloWorld');
 });
 
 router.post('/send' , function(req, res, next){

@@ -118,7 +118,7 @@ export default {
                 if(this.validate()){
                     this.mailSendingRequested = true;
 
-                    this.$http.post('/api/mailer/send' , {
+                    this.$http.post('https://gomja-log-mailer.herokuapp.com/mailer/send' , {
                         mail : this.mail,
                         phone : this.phone,
                         subject : this.subject,
